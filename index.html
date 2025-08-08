@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Revision nails | 石神井台のプライベートネイルサロン</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css" />
+<meta name="description" content="練馬区石神井台の自宅サロン『Revision nails』。フィルイン対応、丁寧なケアとモチにこだわるプライベートネイル。オンライン予約対応。">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">Revision nails</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#access">Access</a>
+      <a href="#booking" class="btn primary">予約</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#access">Access</a>
+    <a href="#booking" class="btn primary">予約する</a>
+  </div>
+</header>
+
+<section class="hero" id="hero" role="banner">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1>手元から、印象を整える。</h1>
+    <p>石神井台のプライベートネイルサロン。丁寧なケアと艶、そしてモチにこだわります。</p>
+    <a href="#booking" class="btn primary large">オンライン予約</a>
+  </div>
+</section>
+
+<main>
+  <section id="about" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>About</h2>
+        <p>Revision nails（リビジョンネイルズ）は、練馬区石神井台の自宅サロンです。静かな空間で、ライフスタイルに寄り添ったデザインをご提案します。フィルイン対応、ケア重視で自爪の健康を大切に。</p>
+        <ul class="bullets">
+          <li>フィルイン施術 / 肌馴染みの良いカラー</li>
+          <li>オフ込み / 丁寧な甘皮ケア</li>
+          <li>持ちとフォルムにこだわるベースづくり</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <div class="card">
+          <h3>営業情報</h3>
+          <dl>
+            <dt>営業時間</dt><dd>10:00 - 19:00（最終受付 17:00）</dd>
+            <dt>定休日</dt><dd>不定休</dd>
+            <dt>場所</dt><dd>練馬区石神井台（詳細はご予約後にご案内）</dd>
+          </dl>
+          <a class="btn" href="#booking">空き状況をみる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section muted">
+    <div class="container">
+      <h2>Menu & Price</h2>
+      <div class="cards" id="menuCards">
+        <!-- JS injects service cards -->
+      </div>
+      <p class="note">※ フィルイン / 長さ出し / アート追加は当日ご相談ください。</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="masonry">
+        <img src="https://images.unsplash.com/photo-1604881981369-5c69a1a3e6f1?auto=format&fit=crop&w=1000&q=80" alt="nail 1">
+        <img src="https://images.unsplash.com/photo-1604754742629-3e5728248b08?auto=format&fit=crop&w=1000&q=80" alt="nail 2">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80" alt="nail 3">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=80" alt="nail 4">
+        <img src="https://images.unsplash.com/photo-1556228578-6e6b1282c3a1?auto=format&fit=crop&w=1000&q=80" alt="nail 5">
+      </div>
+    </div>
+  </section>
+
+  <section id="access" class="section muted">
+    <div class="container grid two">
+      <div>
+        <h2>Access</h2>
+        <p>東京都練馬区石神井台（最寄り：西武新宿線 上石神井 / 武蔵関）。詳細はご予約確定後にお知らせします。</p>
+        <ul class="bullets">
+          <li>近隣コインパーキングあり</li>
+          <li>自転車置き場あり</li>
+          <li>お子様連れ応相談</li>
+        </ul>
+      </div>
+      <div class="map-card">
+        <div class="card">
+          <div class="map-placeholder">MAP</div>
+          <p class="small">※ プライベートサロンのため詳細住所は非公開です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Online Booking</h2>
+        <p>以下フォームから仮予約を受け付けています。確定は折り返しのご連絡をもって確定となります。</p>
+        <form id="bookingForm" class="form">
+          <label>メニュー
+            <select id="serviceId"></select>
+          </label>
+          <div class="row two">
+            <label>日付<input type="date" id="date"/></label>
+            <label>開始時間<input type="time" id="time" value="10:00"/></label>
+          </div>
+          <div class="row two">
+            <label>お名前*<input type="text" id="name" placeholder="例）田中 花子" required/></label>
+            <label>電話番号<input type="tel" id="phone" placeholder="090-XXXX-XXXX"/></label>
+          </div>
+          <label>LINE ID（任意）<input type="text" id="lineId" placeholder="@xxxx"/></label>
+          <label>ご要望・注意点<textarea id="note" placeholder="アレルギー、デザイン希望など"></textarea></label>
+          <button type="submit" class="btn primary full">予約リクエスト送信</button>
+          <p class="small muted">※ 現時点では仮予約です。管理画面で「確定」に変更すると確定になります。</p>
+        </form>
+        <div id="bookingThanks" class="thanks hidden">
+          <div class="card">
+            <h3>仮予約を受け付けました。</h3>
+            <p>折り返しメッセージにて確定のご連絡をいたします。LINEの通知をご希望の方は、友だち追加後にIDをお知らせください。</p>
+          </div>
+        </div>
+      </div>
+      <aside class="admin-hint">
+        <div class="card">
+          <h3>管理ログイン</h3>
+          <p class="small">下のボタンから簡易管理画面へ。<br>※ 仮運用のためパスワードは「<b>revision</b>」。</p>
+          <button id="openAdmin" class="btn">管理画面を開く</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="admin" class="section hidden">
+    <div class="container">
+      <h2>管理</h2>
+      <div class="tabs">
+        <button data-tab="bookings" class="active">予約</button>
+        <button data-tab="customers">顧客</button>
+        <button data-tab="analytics">レポート</button>
+      </div>
+      <div id="tab-bookings" class="tab active"></div>
+      <div id="tab-customers" class="tab"></div>
+      <div id="tab-analytics" class="tab"></div>
+      <p class="small muted">※ データはこのブラウザのlocalStorageに保存されます。本番はFirebaseに切り替えます。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">Revision nails</div>
+        <p class="small muted">© 2025 Revision nails.</p>
+      </div>
+      <nav class="footer-links small">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#booking">予約</a>
+        <a href="#admin">管理</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>document.querySelector('footer .muted').innerHTML = '© ' + new Date().getFullYear() + ' Revision nails.';</script>
+<script src="./script.js"></script>
+</body>
+</html>
